@@ -13,6 +13,7 @@ An API for creating and managing posts, tags, and comments with authentication a
 
 ## Run it
 To be able to run this project you need first to have docker installed on your local machine
+
 1- Include a .env file with the following content (ensure to replace placeholders with your actual values):
 ```.env
 ConnectionStrings__DefaultConnection=<your db connection string>
@@ -53,7 +54,10 @@ The template for a SQL Server connection string is like this:
 Server=server-url-for-db;Database=PostsApiTestDb;User Id=sa;Password=your-db-conn-password;TrustServerCertificate=true;
 ```
 
-2- Run `dotnet test`
+2- Run the testing project: 
+```bash
+dotnet test
+```
 
 ## API overview
 | Method | Route | Auth | What it does |
