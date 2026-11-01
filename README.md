@@ -45,6 +45,7 @@ NOTE: make sure you promote a user to admin in order to be able to access admin-
 
 ## Tests
 To be able to run the testing project to test the server app follow these steps:
+
 1- Set a database connection string for the current environment
 ```bash
 $env:POSTSAPI_TEST_DB = "your-db-connection-string"
