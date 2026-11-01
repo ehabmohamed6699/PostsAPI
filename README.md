@@ -28,12 +28,19 @@ docker build -t postsapi .
 docker run --rm -p 8080:8080 --env-file .env --name api postsapi
 ```
 3- Navigate to http://localhost:8080/health and ensure it says "Healthy".
+
 4- Ensure the health request returned 200 by checking server logs:
 ```bash
 docker logs api
 ```
 To run the full API locally, follow these steps:
-1- Migrate to the database (make sure the connection string is in .env)
+
+1- Make sure to add the database connection string and the JWT key to user secrets:
+```bash
+dotnet user-secrets set "ConnectionStrings:DefaultConnection" "<your string>"
+dotnet user-secrets set "JwtSettings:Key" "<a long random string>"
+```
+2- Migrate to the database
 ```bash
 dotnet ef database update
 ```
